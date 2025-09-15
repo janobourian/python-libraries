@@ -1,0 +1,100 @@
+import numpy as np
+
+a = np.arange(15).reshape(3, 5)
+print(f"a: {a}")
+print(f"shape: {a.shape}")
+print(f"ndim: {a.ndim}")
+print(f"dtype: {a.dtype.name}")
+print(f"itemsize: {a.itemsize}")
+print(f"size: {a.size}")
+print(f"type: {type(a)}")
+
+b = np.array([6, 7, 8])
+print(f"b: {b}")
+print(f"type: {type(b)}")
+print(f"b.shape: {b.shape}")
+print(f"b.ndim: {b.ndim}")
+print(f"b.dtype: {b.dtype.name}")
+print(f"b.itemsize: {b.itemsize}")
+print(f"b.size: {b.size}")
+
+c = np.array([[1.5, 2, 3], [4, 5, 6]])
+print(f"c: {c}")
+print(f"type: {type(c)}")
+print(f"c.shape: {c.shape}")
+print(f"c.ndim: {c.ndim}")
+print(f"c.dtype: {c.dtype.name}")
+print(f"c.itemsize: {c.itemsize}")
+print(f"c.size: {c.size}")
+
+zeros_array = np.zeros((3, 4))
+print(f"zeros_array: {zeros_array}")
+
+ones_array = np.ones((2, 3, 4), dtype=np.int16)
+print(f"ones_array: {ones_array}")
+
+arange_array = np.arange(10, 30, 5)
+print(f"arange_array: {arange_array}")
+
+linspace_array = np.linspace(0, 2, 9)
+print(f"linspace_array: {linspace_array}")
+x = np.linspace(0, 2 * np.pi, 100)
+f = np.sin(x)
+
+import matplotlib.pyplot as plt
+
+plt.plot(x, f)
+plt.xlabel('x')
+plt.ylabel('sin(x)')
+plt.title('Plot of sin(x)')
+plt.grid(True)
+# plt.show()
+
+A = np.array([[1, 1], [0, 1]])
+B = np.array([[2, 0], [3, 4]])
+print(f"A*B:\n{A * B}")
+print(f"A.dot(B):\n{A.dot(B)}")
+print(f"A@B:\n{A @ B}")
+
+C = np.array([[1, 2], [2, 7]])
+D = np.array([[3], [9]])
+X = np.linalg.solve(C, D)
+print(f"Solution of CX = D:\n{X}")
+
+a = np.random.random((2, 3))
+print(f"a: {a}")
+print(f"a.min(): {a.min()}")
+print(f"a.max(): {a.max()}")
+print(f"a.sum(): {a.sum()}")
+print(f"a.mean(): {a.mean()}")
+print(f"a.std(): {a.std()}")
+print(f"a.var(): {a.var()}")
+print(f"a.argmin(): {a.argmin()}")
+print(f"a.argmax(): {a.argmax()}")
+print(f"a.cumsum(): {a.cumsum()}")
+print(f"a.cumprod(): {a.cumprod()}")
+
+b = np.arange(12).reshape(3, 4)
+print(f"b: {b}")
+print(f"b.sum(axis=0): {b.sum(axis=0)}")
+print(f"b.sum(axis=1): {b.sum(axis=1)}")
+
+B = np.arange(3)
+print(f"B: {B}")
+print(f"np.exp(B): {np.exp(B)}")
+print(f"np.sqrt(B): {np.sqrt(B)}")
+C = np.array([2., -1., 4.])
+print(f"C: {C}")
+print(f"np.add(B, C): {np.add(B, C)}")
+print(f"B + C: {B + C}")
+print(f"np.maximum(B, C): {np.maximum(B, C)}")
+print(f"np.sin(B): {np.sin(B)}")
+print(f"np.log(B + 1): {np.log(B + 1)}")
+
+a = np.arange(10)**3
+print(f"a: {a}")
+print(f"a[2]: {a[2]}")
+print(f"a[2:5]: {a[2:5]}")
+print(f"a[ : :-1]: {a[ : :-1]}")
+a[0:6:2] = -1000
+print(f"a after modification: {a}")
